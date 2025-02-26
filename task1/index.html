@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Profile</title>
+</head>
+
+<body bgcolor="#f4f4f4" text="#333333" link="#0000ee" vlink="#551a8b" alink="#ff0000">
+
+    <!-- Header Section -->
+    <header align="center" bgcolor="#333333" style="padding: 20px;">
+        <h1 title="Portfolio Title" style="color: black;">HTML Profile</h1>
+        <p title="Welcome Message" style="color: black;">Welcome to my basic HTML profile.</p>
+        <nav>
+            <ul type="none" style="padding: 0;">
+                <li><a href="#about" style="color: black; text-decoration: none;">About Me</a></li>
+                <li><a href="#projects" style="color: black; text-decoration: none;">Projects</a></li>
+                <li><a href="#certificates" style="color: black; text-decoration: none;">Certificates</a></li>
+                <li><a href="#contact" style="color: black; text-decoration: none;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" align="center" bgcolor="#ffffff" style="padding: 20px;">
+        <h2 title="About Me Section">About Me</h2>
+        <figure>
+            <img src="images/1714489697027.jpg" alt="Profile Picture" width="150" border="1">
+            <figcaption>Amr</figcaption>
+        </figure>
+        <dl>
+            <dt>Name:</dt>
+            <dd data-info="Amr">Amr</dd>
+            <dt>Email:</dt>
+            <dd data-info="TSociaty@example.com">TSociaty@example.com</dd>
+            <dt>LinkedIn:</dt>
+            <dd>
+                <a href="https://www.linkedin.com/in/amr-el-dahshan-843a11306/" target="_blank">linkedin.com/in/Amr El-Dahshan</a>
+            </dd>
+        </dl>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" align="center" bgcolor="#f9f9f9" style="padding: 20px;">
+        <h2 title="Projects Section">Projects</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <caption>My Projects</caption>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Project 1</td>
+                    <td><a href="https://github.com/Amr-Khaled-Ahmed">GitHub Link</a></td>
+                </tr>
+                <tr>
+                    <td>Project 2</td>
+                    <td><a href="https://github.com/Amr-Khaled-Ahmed">GitHub Link</a></td>
+                </tr>
+                <tr>
+                    <td>Project 3</td>
+                    <td><a href="https://github.com/Amr-Khaled-Ahmed">GitHub Link</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" align="center" bgcolor="#ffffff" style="padding: 20px;">
+        <h2 title="Certificates Section">Certificates</h2>
+        <ul type="square">
+            <li>Certificate 1</li>
+            <li>Certificate 2</li>
+            <li>Certificate 3</li>
+        </ul>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" align="center" bgcolor="#f9f9f9" style="padding: 20px;">
+        <h2 title="Media Section">Media</h2>
+        <h4>This is our <b>QT GUI game</b>, advice you to see it</h4>
+        <h4>We made it in C++ and QT</h4>
+
+        <br>
+        <video width="320" height="240" controls>
+            <source src="vids/GUI_vedio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br><br>
+        <a href="https://github.com/Amr-Khaled-Ahmed/Assignment2_OOP_Board_Games">View Project on GitHub</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" align="center" bgcolor="#ffffff" style="padding: 20px;">
+        <h2 title="Contact Section">Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="30"></textarea>
+            <br><br>
+            <input type="submit" value="Send" style="background-color: #333333; color: white; padding: 10px 20px; border: none;">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer align="center" bgcolor="#333333" style="padding: 10px;">
+        <p title="Copyright" style="color: black;">&copy; TSociaty</p>
+    </footer>
+
+</body>
+
+</html>
