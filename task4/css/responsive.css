@@ -1,0 +1,133 @@
+/* Responsive Styles */
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top img {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .top-content {
+    width: 100%;
+  }
+
+  .genres-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .third-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .third-grid button:nth-child(-n+3) {
+    grid-column: span 1;
+  }
+
+  .third-grid button:nth-child(n+4):nth-child(-n+5) {
+    grid-column: span 2;
+  }
+
+  .section-2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-2-content {
+    max-width: 100%;
+  }
+
+  .section-2 img {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .genres-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .third-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .third-grid button:nth-child(-n+3) {
+    grid-column: span 1;
+  }
+
+  .third-grid button:nth-child(n+4):nth-child(-n+5) {
+    grid-column: span 1;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-right {
+    margin-top: 10px;
+  }
+
+  .section-2 img {
+    max-width: 100%;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .genres-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .third-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .third-grid button {
+    grid-column: span 1 !important;
+  }
+
+  .top-content h1 {
+    font-size: 30px;
+  }
+
+  .top-content p {
+    font-size: 0.9rem;
+  }
+
+  .section-2-content h1 {
+    font-size: 24px;
+  }
+
+  .section-2-content p {
+    font-size: 0.8rem;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
