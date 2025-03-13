@@ -171,7 +171,7 @@ nav {
   font-size: 15px;
   font-weight: bold;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-  z-index: 2;
+  z-index: 8;
 }
 
 
@@ -191,12 +191,12 @@ nav {
 /* buttons in end style */
 .third-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto auto;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Auto-fit buttons to available space */
+  gap: 10px; /* Space between buttons */
   text-align: center;
   padding: 20px;
 }
+
 
 /* Third Grid Container */
 .third-grid-container {
@@ -207,14 +207,15 @@ nav {
 }
 
 .third-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  gap: 10px; /* Space between buttons */
+  padding: 20px;
 }
 
-
 #normal {
+  flex: 1; /* Allow buttons to grow and fill available space */
+  min-width: 150px; /* Minimum width for each button */
   padding: 0.7rem;
   font-size: 13px;
   border: none;
