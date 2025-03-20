@@ -1,0 +1,71 @@
+:root {
+  --header-bg-color: #212529;
+  --custom-btn-color: #ffc700;
+  --custom-btn-hover-color: #e0b000;
+
+}
+
+/* Header Section */
+.header {
+  background-color: var(--header-bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  display: fixed;
+  padding: auto 20px;
+
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  margin-right: 10px;
+
+}
+/* Navbar Dropdown */
+.navbar-collapse {
+  position: relative;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--header-bg-color);
+  z-index: 1030;
+  margin-top: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('./assests for task5/Session 5 Bootstrap/Task Assets/assets/img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 191px;
+  text-align: center;
+}
+
+/* Custom Button Styles */
+.custom-btn {
+  background-color: var(--custom-btn-color);
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: var(--custom-btn-hover-color);
+}
+
+/* Custom Display Text */
+.custom-diplay {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  font-style: italic;
+}
+
+
