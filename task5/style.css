@@ -2,40 +2,34 @@
   --header-bg-color: #212529;
   --custom-btn-color: #ffc700;
   --custom-btn-hover-color: #e0b000;
-
 }
 
-/* Header Section */
 .header {
   background-color: var(--header-bg-color);
   position: sticky;
   top: 0;
   z-index: 1020;
-  display: fixed;
-  padding: auto 20px;
-
+  padding: 10px 20px;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
 }
+
 .navbar-brand img {
   margin-right: 10px;
-
 }
-/* Navbar Dropdown */
+
 .navbar-collapse {
-  position: relative;
   top: 100%;
   left: 0;
   right: 0;
   background-color: var(--header-bg-color);
   z-index: 1030;
-  margin-top: 10px;
+  padding-left: 20px;
 }
 
-/* Hero Section */
 .hero-section {
   background-image: url('./assests for task5/Session 5 Bootstrap/Task Assets/assets/img/header-bg.jpg');
   background-size: cover;
@@ -45,10 +39,9 @@
   text-align: center;
 }
 
-/* Custom Button Styles */
 .custom-btn {
   background-color: var(--custom-btn-color);
-  color: aliceblue;
+  color: white;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 18px;
   border: none;
@@ -61,11 +54,277 @@
   background-color: var(--custom-btn-hover-color);
 }
 
-/* Custom Display Text */
 .custom-diplay {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 24px;
   font-style: italic;
 }
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: relative;
+  }
+}
+
+
+
+
+
+/* Timeline Section */
+.timeline-container {
+  position: relative;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #e9ecef;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.timeline-image-container {
+  position: absolute;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 7px solid #e9ecef;
+  background-color: white;
+}
+
+.timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-line {
+  display: none;
+}
+
+.timeline-title {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.timeline-subtitle {
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.timeline-content {
+  margin: 70px;
+}
+
+.learn-more {
+  color: #6c757d;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.learn-more:hover {
+  color: #5a6268;
+  text-decoration: underline;
+}
+
+.timeline-final-image-container {
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.timeline-final-image {
+  width: 100%;
+  height: 100%;
+  background-color: #ffc107;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+.timeline-final-image p{
+  font-size: 28px;
+}
+
+
+
+.timeline-item .row {
+  position: relative;
+  min-height: 200px;
+}
+
+.timeline-item .col-md-6:first-child {
+  padding-right: 100px;
+  text-align: right;
+}
+
+.timeline-item .col-md-6:last-child {
+  padding-left: 100px;
+  text-align: left;
+}
+
+.timeline-item .position-relative {
+  position: static !important;
+}
+
+
+@media (max-width: 767.98px) {
+
+
+  .timeline-item .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .timeline-item .col-md-6 {
+    flex: 1;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .timeline-image-container {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+
+  .timeline-final-image-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timeline-title {
+    font-size: 18px;
+  }
+
+  .timeline-subtitle {
+    font-size: 16px;
+  }
+
+  .learn-more {
+    font-size: 14px;
+  }
+
+  .timeline-content {
+    margin: 20px;
+  }
+  .timeline-final-image {
+    width: 100%;
+    height: 100%;
+    background-color: #ffc107;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+
+  }
+  .timeline-final-image p{
+    font-size: 10px;
+  }
+}
+
+
+
+
+/* Logo Image Styles */
+.logo-img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.d-flex.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Footer Styles */
+.copyright {
+  background-color: #f8f9fa;
+  color: #000;
+  padding: 1rem 0;
+}
+
+.copyright a {
+  color: #000;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  color: #ffc700;
+}
+
+/* Social Media Button Styles */
+.btn-black {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-black:hover {
+  background-color: #333;
+}
+
+.btn-social {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contact-section {
+  color: white;
+  background-image: url('./assests for task5/Session 5 Bootstrap/Task Assets/assets/img/map.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(33, 37, 41);
+  padding: 50px 0;
+}
+
+
+.section-subheading.text-muted {
+  color: rgb(84, 102, 118) !important;
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+
 
 
