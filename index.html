@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web tasks</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      background-color: #000;
+      color: #00ff00;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    header i {
+      font-size: 2rem;
+      color: #0f0;
+      animation: glow 2s infinite alternate;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    ul {
+      list-style-type: none;
+      width: 100%;
+      max-width: 500px;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #0f0;
+    }
+
+    li {
+      margin: 15px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00ff00;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #000;
+      border: 1px solid #0f0;
+      padding: 12px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #002200;
+      transform: scale(1.02);
+      box-shadow: 0 0 5px #00ff00;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00ff00;
+      }
+      to {
+        text-shadow: 0 0 20px #00ff00;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      a {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <i class="fas fa-user-secret"></i>
+    <h1>Hacker Hub</h1>
+  </header>
+
+  <ul>
+    <li>
+      <a href="./task1/index.html"><i class="fas fa-terminal"></i> Task 1</a>
+    </li>
+    <li>
+      <a href="./task2/index.html"><i class="fas fa-bug"></i> Task 2</a>
+    </li>
+    <li>
+      <a href="./task3/index.html"><i class="fas fa-lock"></i> Task 3</a>
+    </li>
+    <li>
+      <a href="./task4/index.html"><i class="fas fa-lock"></i> Task 3</a>
+    </li>
+    <li>
+      <a href="./task5/index.html"><i class="fas fa-lock"></i> Task 3</a>
+    </li>
+  </ul>
+</body>
+</html>
