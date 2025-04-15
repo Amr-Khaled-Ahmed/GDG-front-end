@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web tasks</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacker Hub</title>
+    <link rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/2920/2920244.png"
+      type="image/png">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
     * {
       margin: 0;
       padding: 0;
@@ -46,7 +48,7 @@
     ul {
       list-style-type: none;
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
       background-color: #111;
       padding: 20px;
       border-radius: 12px;
@@ -54,10 +56,10 @@
     }
 
     li {
-      margin: 15px 0;
+      margin-bottom: 20px;
     }
 
-    a {
+    .task-link {
       text-decoration: none;
       color: #00ff00;
       font-size: 1.1rem;
@@ -71,10 +73,17 @@
       transition: 0.3s ease;
     }
 
-    a:hover {
+    .task-link:hover {
       background-color: #002200;
       transform: scale(1.02);
       box-shadow: 0 0 5px #00ff00;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: #55ff55;
+      margin-left: 34px;
+      margin-top: 5px;
     }
 
     @keyframes glow {
@@ -91,35 +100,56 @@
         font-size: 1.5rem;
       }
 
-      a {
+      .task-link {
         font-size: 1rem;
         padding: 10px;
       }
+
+      .description {
+        font-size: 0.8rem;
+        margin-left: 24px;
+      }
     }
   </style>
-</head>
-<body>
-  <header>
-    <i class="fas fa-user-secret"></i>
-    <h1>Hacker Hub</h1>
-  </header>
+  </head>
+  <body>
+    <header>
+      <i class="fas fa-user-secret"></i>
+      <h1>Hacker Hub</h1>
+    </header>
 
-  <ul>
-    <li>
-      <a href="./task1/index.html"><i class="fas fa-terminal"></i> Task 1</a>
-    </li>
-    <li>
-      <a href="./task2/index.html"><i class="fas fa-bug"></i> Task 2</a>
-    </li>
-    <li>
-      <a href="./task3/index.html"><i class="fas fa-lock"></i> Task 3</a>
-    </li>
-    <li>
-      <a href="./task4/index.html"><i class="fas fa-lock"></i> Task 3</a>
-    </li>
-    <li>
-      <a href="./task5/index.html"><i class="fas fa-lock"></i> Task 3</a>
-    </li>
-  </ul>
-</body>
+    <ul>
+      <li>
+        <a class="task-link" href="./task1/index.html"><i
+            class="fas fa-terminal"></i> Task 1</a>
+        <p class="description">Basic portfolio web page</p>
+      </li>
+      <li>
+        <a class="task-link" href="./task2/challenge1/index.html"><i
+            class="fas fa-code"></i> Task 2 - Challenge 1</a>
+        <p class="description">Basic-styled portfolio design</p>
+      </li>
+      <li>
+        <a class="task-link"
+          href="./task2/challenge2/recipe-page-main/index.html"><i
+            class="fas fa-utensils"></i> Task 2 - Challenge 2</a>
+        <p class="description">Food recipe website</p>
+      </li>
+      <li>
+        <a class="task-link" href="./task3/index.html"><i
+            class="fas fa-coffee"></i> Task 3</a>
+        <p class="description">Basic coffee shop website</p>
+      </li>
+      <li>
+        <a class="task-link" href="./task4/index.html"><i
+            class="fas fa-music"></i> Task 4</a>
+        <p class="description">Sound Hub website (custom style)</p>
+      </li>
+      <li>
+        <a class="task-link" href="./task4/index.html"><i
+            class="fab fa-bootstrap"></i> Task 4 (Bootstrap)</a>
+        <p class="description">Sound Hub built using Bootstrap</p>
+      </li>
+    </ul>
+  </body>
 </html>
