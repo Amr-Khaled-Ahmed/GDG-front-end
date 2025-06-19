@@ -1,39 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Position Example</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 200vh;
-        }
-
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            background: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 18px;
-        }
-
-        .content {
-            padding: 20px;
-            font-size: 16px;
-        }
-    </style>
+    <title>DOM Access Example</title>
 </head>
 <body>
-    <div class="sticky-nav">This is a Sticky Navigation Bar</div>
-    <div class="content">
-        <p>Scroll down the page, and you'll see the navigation bar sticking to the top.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Curabitur feugiat turpis eu augue dapibus, at consectetur mi fermentum. Donec et enim vel leo efficitur vulputate.</p>
-        <p>More content here...</p>
+    <h2 id="id1">Hello World</h2>
+    <p>Welcome</p>
+    <div>
+        <p>Paragraph 1 .</p>
+        <p>Paragraph 2 .</p>
+        <section><p>Paragraph 3 .</p></section>
     </div>
+    <p>Paragraph 4.</p>
+    <p>Paragraph 5.</p>
+
+    <script>
+        // Original code (fixed syntax errors)
+        const myElements = document.getElementsByTagName("p");
+        document.getElementById("id1").innerHTML = myElements.length;
+
+        // Testing the options for question 79
+        const h2Element = document.getElementById("id1");
+
+        // Option a
+        console.log("Option a (text):", h2Element.text);
+
+        // Option b
+        console.log("Option b (firstChild.nodeValue):", h2Element.firstChild.nodeValue);
+
+        // Option c
+        console.log("Option c (nodeValue):", h2Element.nodeValue);
+
+        // Option d (None of the previous)
+        console.log("Option d (None):", "N/A");
+    </script>
 </body>
 </html>

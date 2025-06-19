@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Problems Solutions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .problem {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-title {
+            color: #3498db;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .description {
+            margin-bottom: 15px;
+        }
+
+        .io {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+
+        .io-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .solution {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        .code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Problems Solutions</h1>
+
+    <div class="problem">
+        <h2 class="problem-title">A. Summation Time</h2>
+        <div class="description">
+            <p>Given a number N and an array A of N numbers, print the absolute summation of these numbers.</p>
+            <p>Absolute value means to remove any negative sign in front of a number.</p>
+        </div>
+
+        <div class="io">
+            <div class="io-title">Input/Output Examples</div>
+            <p><strong>Input:</strong><br>
+            4<br>
+            7 2 1 3</p>
+            <p><strong>Output:</strong><br>
+            13</p>
+
+            <p><strong>Input:</strong><br>
+            3<br>
+            -1 2 -3</p>
+            <p><strong>Output:</strong><br>
+            2</p>
+        </div>
+
+        <div class="solution">
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    long long sum = 0;
+
+    for (int i = 0; i < N; i++) {
+        long long num;
+        cin >> num;
+        sum += num;
+    }
+
+    cout << abs(sum) << endl;
+    return 0;
+}</pre>
+        </div>
+    </div>
+
+    <div class="problem">
+        <h2 class="problem-title">B. Searching</h2>
+        <div class="description">
+            <p>Given a number N and an array A of N numbers, determine if the number X exists in array A or not and print its position (0-index).</p>
+            <p>Note: X may be found once or more than once and may not be found.</p>
+        </div>
+
+        <div class="io">
+            <div class="io-title">Input/Output Examples</div>
+            <p><strong>Input:</strong><br>
+            3<br>
+            3 0 1<br>
+            0</p>
+            <p><strong>Output:</strong><br>
+            1</p>
+
+            <p><strong>Input:</strong><br>
+            5<br>
+            1 3 0 4 5<br>
+            10</p>
+            <p><strong>Output:</strong><br>
+            -1</p>
+        </div>
+
+        <div class="solution">
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    vector&lt;int&gt; A(N);
+
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+    }
+
+    int X;
+    cin >> X;
+
+    for (int i = 0; i < N; i++) {
+        if (A[i] == X) {
+            cout << i << endl;
+            return 0;
+        }
+    }
+
+    cout << -1 << endl;
+    return 0;
+}</pre>
+        </div>
+    </div>
+
+    <div class="problem">
+        <h2 class="problem-title">C. Replacement</h2>
+        <div class="description">
+            <p>Given a number N and an array A of N numbers, print the array after doing the following operations:</p>
+            <ul>
+                <li>Replace every positive number by 1.</li>
+                <li>Replace every negative number by 2.</li>
+            </ul>
+        </div>
+
+        <div class="io">
+            <div class="io-title">Input/Output Examples</div>
+            <p><strong>Input:</strong><br>
+            5<br>
+            1 -2 0 3 4</p>
+            <p><strong>Output:</strong><br>
+            1 2 0 1 1</p>
+        </div>
+
+        <div class="solution">
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    vector&lt;int&gt; A(N);
+
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+    }
+
+    for (int i = 0; i < N; i++) {
+        if (A[i] > 0) {
+            A[i] = 1;
+        } else if (A[i] < 0) {
+            A[i] = 2;
+        }
+    }
+
+    for (int i = 0; i < N; i++) {
+        cout << A[i] << " ";
+    }
+
+    return 0;
+}</pre>
+        </div>
+    </div>
+
+    <div class="problem">
+        <h2 class="problem-title">D. Positions in Array</h2>
+        <div class="description">
+            <p>Given a number N and an array A of N numbers, print all array positions that store a number less than or equal to 10 and the number stored in that position.</p>
+            <p>It's guaranteed that there is at least one number in array less than or equal to 10.</p>
+        </div>
+
+        <div class="io">
+            <div class="io-title">Input/Output Examples</div>
+            <p><strong>Input:</strong><br>
+            5<br>
+            1 2 100 0 30</p>
+            <p><strong>Output:</strong><br>
+            A[0] = 1<br>
+            A[1] = 2<br>
+            A[3] = 0</p>
+        </div>
+
+        <div class="solution">
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    vector&lt;int&gt; A(N);
+
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+    }
+
+    for (int i = 0; i < N; i++) {
+        if (A[i] <= 10) {
+            cout << "A[" << i << "] = " << A[i] << endl;
+        }
+    }
+
+    return 0;
+}</pre>
+        </div>
+    </div>
+
+    <div class="problem">
+        <h2 class="problem-title">E. Array Editing</h2>
+        <div class="description">
+            <p>You are given a number N and an array A of N integers. Your task is to:</p>
+            <ol>
+                <li>Remove all elements that are greater than 100 from the array.</li>
+                <li>Then, extract a sub-array that contains the first K remaining elements after removal.</li>
+                <li>Print the final sub-array.</li>
+            </ol>
+        </div>
+
+        <div class="io">
+            <div class="io-title">Input/Output Examples</div>
+            <p><strong>Input:</strong><br>
+            7 3<br>
+            5 200 15 300 8 100 55</p>
+            <p><strong>Output:</strong><br>
+            5 15 8</p>
+        </div>
+
+        <div class="solution">
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    int N, K;
+    cin >> N >> K;
+    vector&lt;int&gt; A;
+
+    for (int i = 0; i < N; i++) {
+        int num;
+        cin >> num;
+        if (num <= 100) {
+            A.push_back(num);
+        }
+    }
+
+    for (int i = 0; i < K && i < A.size(); i++) {
+        cout << A[i] << " ";
+    }
+
+    return 0;
+}</pre>
+        </div>
+    </div>
+
+    <div class="problem">
+        <h2 class="problem-title">F. Filter and Modify</h2>
+        <div class="description">
+            <p>You are given a number N and an array A of N integers. Your task is to:</p>
+            <ol>
+                <li>Keep only the even numbers in the array.</li>
+                <li>Then, multiply each remaining number by 2.</li>
+                <li>Finally, print the modified array.</li>
+            </ol>
+        </div>
+
+        <div class="io">
+            <div class="io-title">Input/Output Examples</div>
+            <p><strong>Input:</strong><br>
+            6<br>
+            3 4 7 10 9 2</p>
+            <p><strong>Output:</strong><br>
+            8 20 4</p>
+        </div>
+
+        <div class="solution">
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    vector&lt;int&gt; A;
+
+    for (int i = 0; i < N; i++) {
+        int num;
+        cin >> num;
+        if (num % 2 == 0) {
+            A.push_back(num * 2);
+        }
+    }
+
+    for (int num : A) {
+        cout << num << " ";
+    }
+
+    return 0;
+}</pre>
+        </div>
+    </div>
+</body>
+</html>
